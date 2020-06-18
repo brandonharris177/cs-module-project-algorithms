@@ -82,11 +82,13 @@ def single_number(arr):
             #remove item
             del counts[num]
         else:
-            num = 1
+            counts[num] = 1
     
-    for k, v in counts.items():
-        if v == 1:
-            return k
+    # for k, v in counts.items():
+    #     if v == 1:
+    #         return k
+
+    return list(counts.keys())[0]
 # single_number([1, 1, 2, 2, 3, 4, 4])
 
 

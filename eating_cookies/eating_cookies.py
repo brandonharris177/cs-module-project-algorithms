@@ -20,8 +20,8 @@ Returns: an integer
 
 def eating_cookies(n, cache=None):
     # Your code here
-    print(n)
-    print("cache at top", cache)
+    # print(n)
+    # print("cache at top", cache)
     if n == 0:
         return 1
     if n < 0:
@@ -29,16 +29,14 @@ def eating_cookies(n, cache=None):
     if cache is None:    
         cache = {}
     if n in cache:
-        print("cache", cache[n])
         return cache[n]
 
-    print("n", n)
     cache[n] = eating_cookies(n-1, cache) + eating_cookies(n-2, cache) + eating_cookies(n-3, cache)
 
     return cache[n]
 
 if __name__ == "__main__":
     # Use the main function here to test out your implementation
-    num_cookies = 4
+    num_cookies = 10
     print(eating_cookies(num_cookies))
     # print(f"There are {eating_cookies(num_cookies)} ways for Cookie Monster to each {num_cookies} cookies")
