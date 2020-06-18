@@ -54,3 +54,5 @@ def divides_self(num):
     return True
 
 
+"""notes from 18/06/20"""
+
